@@ -1,0 +1,4 @@
+<mat-card *ngIf="sizeIsOne()">{{ getMessage(0) }}</mat-card>
+<div *ngIf="!sizeIsOne()">
+    <mat-card *ngFor="let element of messages; let i=index">{{ getMessage(i) }}</mat-card>
+</div>
