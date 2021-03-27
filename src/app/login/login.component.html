@@ -1,0 +1,13 @@
+<div *ngIf="usernameIsNull()">
+    <mat-toolbar style="background-color: #e91e63;">
+        <span>Discutons mon beau garçon</span>
+    </mat-toolbar>
+
+    <form class="example-form">
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Choisis ton nom bg</mat-label>
+            <input id="username" matInput placeholder="">
+            <button mat-stroked-button type="submit" (click)="sendData()">Allez</button>
+        </mat-form-field>
+    </form>
+</div>

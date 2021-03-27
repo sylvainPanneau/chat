@@ -1,4 +1,46 @@
-<mat-card *ngIf="sizeIsOne()">{{ getMessage(0) }}</mat-card>
-<div *ngIf="!sizeIsOne()">
-    <mat-card *ngFor="let element of messages; let i=index">{{ getMessage(i) }}</mat-card>
+<!-- Set style to me -->
+<div *ngIf="isLogged(0) && sizeIsOne()">
+    <div class="me">
+        <mat-card *ngIf="sizeIsOne()">
+            <div class="innerMessageDiv" style="width: fit-content;">{{ getMessage(0) }}</div>
+        </mat-card>
+    </div>
 </div>
+
+<!-- Set style to others -->
+
+<div *ngIf="!isLogged(0) && sizeIsOne()">
+    <div style="background-color: #23566f;" class="others">
+        <mat-card style="background-color: #23566f;" *ngIf="sizeIsOne()">
+            <div class="innerMessageDiv" style="width: fit-content;">{{ getMessage(0) }}</div>
+        </mat-card>
+    </div>
+</div>
+
+
+<!-- --------------- Size more than 1 ---------------- -->
+
+
+
+
+
+<div *ngIf="!sizeIsOne()">
+    <div *ngFor="let element of messages; let i=index">
+        <div *ngIf="isLogged(i)">
+            <div class="me">
+                <mat-card>
+                    <div class="innerMessageDiv" style="width: fit-content;">{{ getMessage(i) }}</div>
+                </mat-card>
+            </div>
+        </div>
+        <div *ngIf="!isLogged(i)">
+            <div style="background-color: #23566f;" class="others">
+                <mat-card style="background-color: #23566f;">
+                    <div class="innerMessageDiv" style="width: fit-content;">{{ getMessage(i) }}</div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="useless"></div>

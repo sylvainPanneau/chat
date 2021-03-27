@@ -11,6 +11,9 @@ import { MessageComponent } from './message/message.component';
 import {MatCardModule} from '@angular/material/card';
 import { TypeFieldComponent } from './type-field/type-field.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -19,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     MessageComponent,
     TypeFieldComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatInputModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

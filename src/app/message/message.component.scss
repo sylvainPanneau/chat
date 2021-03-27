@@ -3,9 +3,47 @@
 }
 
 mat-card {
-    margin-left: 2%;
+    width: 100%;
+    font-size: medium;
     margin-top: 4%;
+    background-color: #565858;
+}
+
+.innerMessageDiv,
+mat-card {
+    word-break: break-all;
+}
+
+.me {
+    border-radius: 5%;
+    margin-left: 75%;
     width: 20%;
-    font-size: large;
+    background-color: #565858;
+    color: black;
+}
+
+.others {
+    margin-left: 2%;
+    width: 20%;
     background-color: #607d8b;
+}
+
+.useless {
+    height: 54px;
+}
+
+@media only screen and (max-width: 768px) {
+    mat-card {
+        font-size: 1em;
+        padding: 15%;
+        line-height: 1.2em;
+        width: 280%;
+        margin-bottom: 9%;
+    }
+    .me {
+        margin-left: 34%;
+    }
+    .others {
+        margin-left: 3%;
+    }
 }

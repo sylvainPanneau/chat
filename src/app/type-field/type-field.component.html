@@ -2,17 +2,21 @@
     <span>Discutons mon beau garçon</span>
 </mat-toolbar>
 
-<div class="messages">
+<div class="messages" style="margin-top: 68px;">
     <app-message></app-message>
 </div>
 
 
-<div id="form">
-    <form class="example-form">
-        <mat-form-field class="example-full-width">
+<!-- <div id="form">
+    
+</div> -->
+
+<form class="example-form">
+    <mat-card>
+        <mat-form-field appearance="outline" class="example-full-width">
             <mat-label>Ecrit wsh</mat-label>
-            <input matInput placeholder="">
-            <button mat-stroked-button type="submit" (click)="$event.preventDefault()">Ça part</button>
+            <input style="color: white;" matInput placeholder="">
+            <button style="display: none;" mat-stroked-button type="submit" (click)="$event.preventDefault()">Ça part</button>
         </mat-form-field>
-    </form>
-</div>
+    </mat-card>
+</form>
