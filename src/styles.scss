@@ -6,7 +6,7 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: #303030;
+    background-color: #fafafa;
 }
 
 button[type=submit] {
@@ -27,4 +27,14 @@ button[type=submit] {
 
 .example-full-width {
     width: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }

@@ -28,7 +28,7 @@
     <div *ngFor="let element of messages; let i=index">
         <div *ngIf="isLogged(i)">
             <div class="me" style="width: fit-content;">
-                <mat-card style="width: fit-content;">
+                <mat-card style="width: fit-content; background-color: #3e51b5;">
                     <!-- <div class="innerMessageDiv" style="width: fit-content;"></div> -->
                     {{ getMessage(i) }}
                 </mat-card>
@@ -36,7 +36,7 @@
         </div>
         <div *ngIf="!isLogged(i)">
             <div style="width: fit-content;" class="others">
-                <mat-card style="width: fit-content; background-color: #23566f;">
+                <mat-card style="width: fit-content; background-color: #f7f7f7; color: rgba(0, 0, 0, 0.87);">
                     {{ getMessage(i) }}
                 </mat-card>
             </div>

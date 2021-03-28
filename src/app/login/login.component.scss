@@ -3,11 +3,14 @@ form {
     bottom: 40%;
     left: 30%;
     width: 30%;
+    color: black;
 }
 
 button {
     display: none;
 }
+
+mat-toolbar {}
 
 @media only screen and (max-width: 768px) {
     mat-toolbar {

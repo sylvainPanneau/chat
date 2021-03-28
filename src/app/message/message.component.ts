@@ -81,8 +81,8 @@ export class MessageComponent implements OnInit, AfterViewInit {
   }
 
   isLogged(i:number){
-    return true;
-    // return this.getAuthor(i) == this.obsMsg;
+    // return true;
+    return this.getAuthor(i) == this.obsMsg;
   }
 
   setStyle(){
