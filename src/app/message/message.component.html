@@ -1,8 +1,8 @@
 <!-- Set style to me -->
 <div *ngIf="isLogged(0) && sizeIsOne()">
-    <div class="me">
-        <mat-card *ngIf="sizeIsOne()">
-            <div class="innerMessageDiv" style="width: fit-content;">{{ getMessage(0) }}</div>
+    <div class="me" style="width: fit-content;">
+        <mat-card style="width: fit-content;" *ngIf="sizeIsOne()">
+            {{ getMessage(0) }}
         </mat-card>
     </div>
 </div>
@@ -10,9 +10,9 @@
 <!-- Set style to others -->
 
 <div *ngIf="!isLogged(0) && sizeIsOne()">
-    <div style="background-color: #23566f;" class="others">
-        <mat-card style="background-color: #23566f;" *ngIf="sizeIsOne()">
-            <div class="innerMessageDiv" style="width: fit-content;">{{ getMessage(0) }}</div>
+    <div class="others" style="width: fit-content;">
+        <mat-card style="width: fit-content; background-color: #23566f;" *ngIf="sizeIsOne()">
+            {{ getMessage(0) }}
         </mat-card>
     </div>
 </div>
@@ -27,16 +27,17 @@
 <div *ngIf="!sizeIsOne()">
     <div *ngFor="let element of messages; let i=index">
         <div *ngIf="isLogged(i)">
-            <div class="me">
-                <mat-card>
-                    <div class="innerMessageDiv" style="width: fit-content;">{{ getMessage(i) }}</div>
+            <div class="me" style="width: fit-content;">
+                <mat-card style="width: fit-content;">
+                    <!-- <div class="innerMessageDiv" style="width: fit-content;"></div> -->
+                    {{ getMessage(i) }}
                 </mat-card>
             </div>
         </div>
         <div *ngIf="!isLogged(i)">
-            <div style="background-color: #23566f;" class="others">
-                <mat-card style="background-color: #23566f;">
-                    <div class="innerMessageDiv" style="width: fit-content;">{{ getMessage(i) }}</div>
+            <div style="width: fit-content;" class="others">
+                <mat-card style="width: fit-content; background-color: #23566f;">
+                    {{ getMessage(i) }}
                 </mat-card>
             </div>
         </div>

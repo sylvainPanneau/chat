@@ -23,7 +23,9 @@ export class MessageComponent implements OnInit, AfterViewInit {
   constructor(private msg: TypeFieldComponent) {  }
 
   ngAfterViewInit(){
-    this.resizeCard();
+    let formHeight = $('form mat-card').eq(0).height();
+    let that = $('app-message mat-card');
+    $('app-message mat-card').eq(that.length-1).css('margin-bottom', formHeight/1.83+"px");
   }
 
   ngOnInit(): void {
@@ -82,6 +84,7 @@ export class MessageComponent implements OnInit, AfterViewInit {
   }
 
   isLogged(i:number){
+    // return true;
     return this.getAuthor(i) == this.obsMsg;
   }
 

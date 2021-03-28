@@ -1,49 +1,71 @@
 * {
-    color: white;
+    color: rgb(231, 231, 231);
 }
 
 mat-card {
-    width: 100%;
+    // width: 100%;
     font-size: medium;
-    margin-top: 4%;
+    // margin-top: 4%;
     background-color: #565858;
+    margin-bottom: 4px;
 }
 
 .innerMessageDiv,
 mat-card {
-    word-break: break-all;
+    // word-break: break-all;
 }
 
 .me {
     border-radius: 5%;
-    margin-left: 75%;
-    width: 20%;
-    background-color: #565858;
+    // margin-left: 75%;
+    // width: 20%;
+    background-color: #303030;
     color: black;
+    max-width: 70%;
+    float: right;
+    clear: both;
+    margin-right: 10px;
 }
 
 .others {
-    margin-left: 2%;
-    width: 20%;
-    background-color: #607d8b;
+    // margin-left: 2%;
+    // width: 20%;
+    background-color: #303030;
+    max-width: 70%;
+    float: left;
+    clear: both;
+    margin-left: 10px;
 }
 
 .useless {
+    position: absolute;
+    bottom: 0;
     height: 54px;
 }
 
 @media only screen and (max-width: 768px) {
     mat-card {
         font-size: 1em;
-        padding: 15%;
+        // padding: 9%;
         line-height: 1.2em;
-        width: 280%;
-        margin-bottom: 9%;
+        // width: 280%;
+        // margin-bottom: 9%;
+        margin-bottom: 4px;
+        padding: 10px;
     }
     .me {
-        margin-left: 34%;
+        // margin-left: 34%;
+        float: right;
+        clear: both;
+        margin-right: 14px;
     }
     .others {
-        margin-left: 3%;
+        float: left;
+        // clear: left;
+        clear: both;
+        margin-left: 14px;
+    }
+    #useless {
+        height: 100px;
     }
 }
