@@ -23,9 +23,12 @@ export class MessageComponent implements OnInit, AfterViewInit {
   constructor(private msg: TypeFieldComponent) {  }
 
   ngAfterViewInit(){
-    let formHeight = $('form mat-card').eq(0).height();
-    let that = $('app-message mat-card');
-    $('app-message mat-card').eq(that.length-1).css('margin-bottom', formHeight/1.83+"px");
+    // let formHeight = $('form mat-card').eq(0).height();
+    // let that = $('app-message mat-card');
+    // $('app-message mat-card').eq(that.length-1).css('margin-bottom', formHeight/1.69+"px");
+    
+    // ATTENTION --- Je mets ma div apres un view init donc plus d'effet à chaque envoie de message... Inutile
+    // Voir aussi si c'est possible de changer de couleur de task bar... Mais je crois que c'est faisable que pour la status bar en haut.
   }
 
   ngOnInit(): void {
@@ -63,12 +66,6 @@ export class MessageComponent implements OnInit, AfterViewInit {
 
   getMessage(i:number){    
     if (($('app-message mat-card').eq($('app-message mat-card').length-1).offset().top >= $('form mat-card').eq(0).offset().top-$('form mat-card').eq(0).offset().top*0.1) && ($('app-message mat-card').eq($('app-message mat-card').length-1).offset().top != this.previousMessageOffset)) {
-      if ($( window ).width() <= 768) {
-        $('.useless').css('height', $('form mat-card').eq(0).height()/1.5);
-      }
-      else{
-        $('.useless').css('height', $('form mat-card').eq(0).height()*2);
-      }
       window.scrollTo(0,document.body.scrollHeight);
     }
     this.previousMessageOffset = $('app-message mat-card').eq($('app-message mat-card').length-1).offset().top
@@ -84,8 +81,8 @@ export class MessageComponent implements OnInit, AfterViewInit {
   }
 
   isLogged(i:number){
-    // return true;
-    return this.getAuthor(i) == this.obsMsg;
+    return true;
+    // return this.getAuthor(i) == this.obsMsg;
   }
 
   setStyle(){

@@ -21,13 +21,13 @@ export class TypeFieldComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if ($( window ).width() <= 768) {
+    // if ($( window ).width() <= 768) {
       
-      $('mat-form-field div div').css('height', '37px');
-      $('mat-form-field div div input').css('padding-bottom', '30px');
-      $('mat-form-field div div input').css('position', 'absolute');
-      $('mat-form-field div div input').css('bottom', '12px');
-    }
+    //   $('mat-form-field div div').css('height', '37px');
+    //   $('mat-form-field div div input').css('padding-bottom', '30px');
+    //   $('mat-form-field div div input').css('position', 'absolute');
+    //   $('mat-form-field div div input').css('bottom', '12px');
+    // }
     this.changeMessage(this.typeFieldUser);
     let superThis = this;
     $('button').click(function(event){

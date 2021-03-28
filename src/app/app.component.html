@@ -299,12 +299,12 @@
     }
 </style>
 
-<div *ngIf="userNull()">
+<!-- <div *ngIf="userNull()">
     <app-login (messageEvent)="receiveMessage($event)"></app-login>
-</div>
+</div> -->
 
-<div *ngIf="!userNull()">
-    <app-type-field [typeFieldUser]="getMessage()"></app-type-field>
-</div>
+<!-- <div *ngIf="!userNull()"> -->
+<app-type-field [typeFieldUser]="getMessage()"></app-type-field>
+<!-- </div> -->
 
 <router-outlet></router-outlet>

@@ -1,5 +1,5 @@
 #form {
-    position: fixed;
+    // position: fixed;
     bottom: 0;
     width: 98%;
     margin-left: 1%;
@@ -11,11 +11,13 @@
 }
 
 form {
-    position: fixed;
-    bottom: 0;
+    clear: both;
+    position: sticky;
+    // position: fixed;
+    // bottom: 0;
     margin: 0;
     width: 100%;
-    margin-top: 30px;
+    // margin-top: 30px;
 }
 
 mat-card {
@@ -39,7 +41,7 @@ mat-toolbar {
         padding-top: 0;
     }
     form {
-        position: fixed;
+        // position: fixed;
         bottom: 0;
         margin: 0;
     }
