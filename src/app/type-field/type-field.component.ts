@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as $ from 'jquery';
 import { BehaviorSubject } from 'rxjs';
+import { AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-type-field',
@@ -20,6 +21,11 @@ export class TypeFieldComponent implements OnInit {
     this.messageSource.next(message);
   }
 
+  ngAfterViewInit(){
+    // $('.example-full-width div').eq(0).css('padding', '0');
+    // $('.example-full-width div').eq(0).css('margin-bottom', '0');
+  }
+
   ngOnInit(): void {
     // if ($( window ).width() <= 768) {
       
@@ -28,6 +34,10 @@ export class TypeFieldComponent implements OnInit {
     //   $('mat-form-field div div input').css('position', 'absolute');
     //   $('mat-form-field div div input').css('bottom', '12px');
     // }
+
+    $('input').focus(function(){
+      window.scrollTo(0,document.body.scrollHeight);
+    })
     this.changeMessage(this.typeFieldUser);
     let superThis = this;
     $('button').click(function(event){
