@@ -18,7 +18,7 @@ export class MessageComponent implements OnInit, AfterViewInit {
 
   obsMsg:string;
 
-  previousMessageOffset: number;
+  previousAmountMessages: number;
 
   constructor(private msg: TypeFieldComponent) {  }
 
@@ -65,10 +65,12 @@ export class MessageComponent implements OnInit, AfterViewInit {
   }
 
   getMessage(i:number){    
-    if (($('app-message mat-card').eq($('app-message mat-card').length-1).offset().top >= $('form mat-card').eq(0).offset().top-$('form mat-card').eq(0).offset().top*0.1) && ($('app-message mat-card').eq($('app-message mat-card').length-1).offset().top != this.previousMessageOffset)) {
-      window.scrollTo(0,document.body.scrollHeight);
+    if ($('app-message mat-card').length != this.previousAmountMessages){
+      setTimeout(function(){
+        window.scrollTo(0,document.body.scrollHeight);
+      }, 5);    
     }
-    this.previousMessageOffset = $('app-message mat-card').eq($('app-message mat-card').length-1).offset().top
+    this.previousAmountMessages = $('app-message mat-card').length;
     return this.messages[i];
   }
 

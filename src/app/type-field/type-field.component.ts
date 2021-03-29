@@ -41,6 +41,9 @@ export class TypeFieldComponent implements OnInit {
     this.changeMessage(this.typeFieldUser);
     let superThis = this;
     $('button').click(function(event){
+      document.getElementById("type-field").blur();
+      // $('form mat-form-field').removeClass();
+      // $('form mat-form-field').addClass('mat-form-field example-full-width ng-tns-c37-1 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label ng-star-inserted mat-form-field-hide-placeholder')
       let message = $('input').val();
       $('input').val("");
       // Need to communicate from parent to child to let user = d
